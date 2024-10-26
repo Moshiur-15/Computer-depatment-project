@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
 
     <script>
         tailwind.config = {
@@ -31,14 +33,21 @@
         <nav class="sticky top-0 bg-gradient-to-r from-green-700 to-cyan-500
     text-white p-4 z-50">
             <div class="container mx-auto flex justify-between items-center">
-                <div class="text-xl font-bold">Computer Department</div>
+                <a href="" class="flex items-center">
+                    <img class="w-10 h-10 rounded-full mr-2" src="./img/download.png" alt="Logo">
+                    <div class="text-xl font-bold">Computer Department</div>
+                </a>
                 <div class="hidden md:flex space-x-4">
                     <a href="#home" class="hover:text-teal-300">Home</a>
                     <a href="#teacher" class="hover:text-teal-300">Teachers</a>
                     <a href="#important-books" class="hover:text-teal-300">Books</a>
+                    <div class="text-base border h-7 w-7 bg-white text-center rounded-full">
+                        <i class="fa-solid fa-user text-black"></i>
+                    </div>
                 </div>
+                
                 <div class="md:hidden">
-                    <button class="text-xl">☰</button>
+                    <button class="text-xl text-black">☰</button>
                 </div>
             </div>
         </nav>
