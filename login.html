@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-gray-100">
+    <nav class="sticky top-0 bg-gradient-to-r from-green-700 to-cyan-500
+    text-white p-4 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">Computer Department</div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-teal-300">Home</a>
+                <a href="#teacher" class="hover:text-teal-300">Teachers</a>
+                <a href="#important-books" class="hover:text-teal-300">Books</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-xl">☰</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero p-5">
+        <div class="hero-content flex-col">
+            <div class="text-center lg:text-center">
+                <h1 class="text-5xl font-bold">Login now!</h1>
+                <p class="py-6">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                </p>
+            </div>
+            <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="password" class="input input-bordered" required />
+                        <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                    </div>
+                    <a href="./index.html" class="form-control mt-6">
+                        <div class="btn btn-primary">Login</div>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
