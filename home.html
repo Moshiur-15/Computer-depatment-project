@@ -26,46 +26,51 @@
             }
         }
     </script>
+    <style>
+        .navbar {
+            backdrop-filter: blur(4px);
+            background-color: rgba(255, 255, 255, 0.7);
+            /* semi-transparent background */
+        }
+    </style>
 </head>
 
-<body class=" text-gray-800">
+<body>
     <!-- Navbar -->
-    <nav class="sticky top-0 bg-gradient-to-r from-green-700 to-cyan-500
-    text-white p-4 z-50">
+    <nav class="navbar sticky top-0 p-4 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="" class="flex items-center">
                 <img class="w-8 md:w-10 rounded-full mr-2" src="./img/download.png" alt="Logo">
                 <div class="text-base md:text-xl font-bold">Computer Department</div>
             </a>
             <div class="hidden md:flex space-x-4">
-                <a href="#home" class="hover:text-teal-300">Home</a>
-                <a href="#teacher" class="hover:text-teal-300">Teachers</a>
-                <a href="#important-books" class="hover:text-teal-300">Books</a>
-                <div class="text-base border h-7 w-7 bg-white text-center rounded-full">
-                    <i class="fa-solid fa-user text-black"></i>
+                <a href="#home" class="hover:text-cyan-500">Home</a>
+                <a href="#teacher" class="hover:text-cyan-500">Teachers</a>
+                <a href="#important-books" class="hover:text-cyan-500">Books</a>
+                <div class="text-base border h-7 w-7 bg-black text-center rounded-full">
+                    <i class="fa-solid fa-user text-white"></i>
                 </div>
             </div>
 
-            <!-- <div class="md:hidden">
-                    <button class="text-xl text-black">☰</button>
-                </div> -->
+            <!-- Mobile Menu -->
             <div class="dropdown dropdown-left md:hidden">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " fill="none" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
                 </div>
-                <ul tabindex="0"
-                    class="menu dropdown-content bg-base-100 rounded-box mt-5  w-32  shadow">
-                    <li class="text-black"><a href="#home" class="hover:text-teal-300">Home</a></li>
-                    <li class="text-black"><a href="#teacher" class="hover:text-teal-300">Teachers</a></li>
-                    <li class="text-black"><a href="#important-books" class="hover:text-teal-300">Books</a></li>
+                <ul tabindex="0" class="menu dropdown-content bg-white rounded-box mt-5 w-32 shadow">
+                    <li><a href="#home" class="hover:text-cyan-500">Home</a></li>
+                    <li><a href="#teacher" class="hover:text-cyan-500">Teachers</a></li>
+                    <li><a href="#important-books" class="hover:text-cyan-500">Books</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
 
     <!-- banner Section -->
     <header style="background-image: url('./img/bg.png');" id="home"
@@ -79,11 +84,11 @@
             </p>
             <button
                 class="mt-6 bg-white  py-2 px-4 rounded-md  hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">Explore
-                Programs</button>
+                More</button>
         </div>
     </header>
 
-    <main class=" bg-gray-100 p-8 md:p-0">
+    <main class=" bg-gray-200 p-8 md:p-0">
         <!-- Section About Us -->
         <section id="about" class="py-3 md:py-8 lg:py-16">
             <div class="container mx-auto text-center">
@@ -171,56 +176,53 @@
                 <!-- Card Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <img src="./img/20108-1000x1000.jpg" alt="Book 1" class=" w-32 h-32 mx-auto mb-6 rounded">
-                        <h3 class="text-xl font-bold text-teal-600">Java programming</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow ">
+                        <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-32 h-32 mx-auto mb-6 rounded">
+                        <h3 class="text-xl font-bold text-teal-600">Java Programming</h3>
                         <p class="text-gray-500 mt-4">A comprehensive guide to algorithms, essential for anyone studying
-                            or
-                            working in computer science.</p>
+                            or working in computer science.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
                             onclick="my_modal_1.showModal()">
-                            View More
+                            View Details
                         </button>
-
                     </div>
 
                     <!-- Card 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <img src="./img/images (6).jpg" alt="Book 1"
-                            class=" w-32 h-32 mx-auto mb-6 rounded border-none">
+                        <img src="./img/images (6).jpg" alt="Book 2" class="w-32 h-32 mx-auto mb-6 rounded border-none">
                         <h3 class="text-xl font-bold text-teal-600">Data Structure</h3>
                         <p class="text-gray-500 mt-4">This book teaches you how to write code that is easy to
-                            understand,
-                            maintain, and improve.</p>
+                            understand, maintain, and improve.</p>
                         <button
-                            class="mt-6  text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_2.showModal()">View More</button>
+                            class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
+                            onclick="my_modal_2.showModal()">View Details</button>
                     </div>
 
                     <!-- Card 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <img src="./img/python.jpg" alt="Book 1" class=" w-32 h-32 mx-auto mb-6 border rounded">
+                        <img src="./img/python.jpg" alt="Book 3" class="w-32 h-32 mx-auto mb-6 border rounded">
                         <h3 class="text-xl font-bold text-teal-600">Python</h3>
                         <p class="text-gray-500 mt-4">An essential textbook on AI, covering fundamental concepts and
                             state-of-the-art practices.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_3.showModal()">View More</button>
+                            onclick="my_modal_3.showModal()">View Details</button>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg"
-                            alt="Book 1" class=" w-32 h-32 mx-auto border rounded mb-6">
+                            alt="Book 4" class="w-32 h-32 mx-auto border rounded mb-6">
                         <h3 class="text-xl font-bold text-teal-600">Web Design & Development</h3>
                         <p class="text-gray-500 mt-4">This book offers practical advice for becoming a better and more
                             efficient software developer.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_4.showModal()">View More</button>
+                            onclick="my_modal_4.showModal()">View Details</button>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -230,7 +232,8 @@
         <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
             <div class="modal-box">
                 <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write : Md Ronak Ara Chowdhury</h3>
+                <h3 class="font-bold text-base md:text-xl lg:text-2xl ">Write : Md Ronak Ara Chowdhury</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$200</p>
                 <p class="py-4 font-normal text-xs md:text-sm lg:text-base">This book discusses Java Plotting Song plays
                     and algorithms. It adapts to new
                     environments
@@ -250,6 +253,7 @@
             <div class="modal-box">
                 <img src="./img/images (6).jpg" alt="Book 2" class=" w-full h-72 mb-6">
                 <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write : Md Tofail Ahmad Noman</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$400</p>
                 <p class="py-4 text-xs md:text-sm font-normal lg:text-base">This book provides a deep understanding of
                     the fundamentals of data structures and
                     algorithms. Readers will acquire the skills necessary to develop functional software using data
@@ -269,6 +273,7 @@
             <div class="modal-box">
                 <img src="./img/python.jpg" alt="Book 3" class=" w-full h-72 mb-6 border rounded-md">
                 <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write :Md Touhid Hossain</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$300</p>
                 <p class="py-4 text-xs md:text-sm lg:text-base">This book provides the fundamentals of Python and the
                     technical knowledge required for AI.
                     Readers will gain an understanding of modern machine learning and data analysis. The authors have
@@ -290,6 +295,7 @@
                 <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg" alt="Book 4"
                     class=" w-full h-72 mb-6 rounded-md">
                 <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write :Md Zahidul Islam</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$250</p>
                 <p class="py-4 text-xs md:text-sm lg:text-base">This book covers the fundamentals of web design and
                     development, useful for both new and
                     experienced developers. Readers will be introduced to modern web technologies and gain applicable
@@ -304,14 +310,28 @@
         </dialog>
     </main>
 
+
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-green-700 to-cyan-500
-    text-white py-6">
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-6">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Computer Science Department. All rights reserved.</p>
             <div class="space-x-4 mt-4">
                 <a href="#" class="hover:text-teal-300">Privacy Policy</a>
                 <a href="#" class="hover:text-teal-300">Terms of Service</a>
+            </div>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </footer>
