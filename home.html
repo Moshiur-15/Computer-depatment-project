@@ -123,31 +123,37 @@
                 <!-- Card Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
+                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
+                        onclick="my_modal_5.showModal()">
                         <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
                         <p class="text-gray-600 mt-2">Programing Expart</p>
-                        <p class="text-gray-500 mt-4">A dedicated Programming Instructor with a strong commitment to academic excellence, known for his helpful guidance and support in developing students’ coding skills.</p>
+                        <p class="text-gray-500 mt-4">A dedicated Programming Instructor with a strong commitment to
+                            academic excellence, known for his helpful guidance and support in developing students’
+                            coding skills.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
                             More</button>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
+                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
+                        onclick="my_modal_6.showModal()">
                         <img src="./img/ci.jpg" alt="Md Mohiuddin"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
                         <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
-                        <p class="text-gray-500 mt-4">Department, recognized for his inspiring leadership and invaluable mentorship, guiding students in both academics and competitive events.</p>
+                        <p class="text-gray-500 mt-4">Department, recognized for his inspiring leadership and invaluable
+                            mentorship, guiding students in both academics and competitive events.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
                             More</button>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
+                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
+                        onclick="my_modal_7.showModal()">
                         <img src="./img/rupok.jpg " alt="Md: Delowar Hossain"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
@@ -225,9 +231,53 @@
         </section>
 
 
-        <!-- modal books -->
+        <!-- Modal  teacher -->
         <!-- Modal 1 -->
-        <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box">
+                <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
+                <p class="text-gray-600 mt-2">Programing Expart</p>
+                <p class="text-gray-500 mt-4">Md. Ahsan Habib Abir is a passionate programming instructor known for his
+                    exceptional teaching style and commitment to academic excellence. His guidance in programming
+                    fundamentals and advanced concepts has greatly enhanced our skills and understanding. Always
+                    approachable and supportive, he provides invaluable advice and assistance both inside and outside
+                    the classroom, helping students to build confidence in coding. His dedication to his students’
+                    success and his own academic achievements make him a highly respected and valued mentor in our
+                    department.</p>
+                <div class="text-center mt-2">
+                    <form method="dialog">
+                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal 2 -->
+        <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box">
+                <img src="./img/ci.jpg" alt="Md Mohiuddin"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
+                <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
+                <p class="text-gray-500 mt-4">Md. Mohiuddin, as the head of the Computer Science Department, brings
+                    invaluable guidance and support to students both academically and in extracurricular activities. He
+                    is not only a dedicated academic mentor but also an inspiring coach, leading our teams through
+                    various competitions with a remarkable blend of knowledge and leadership. His commitment to helping
+                    students succeed is evident in the time he spends guiding us through complex subjects and fostering
+                    our skills for success beyond the classroom. His dedication and insights inspire us to excel in
+                    every pursuit.</p>
+                <div class="text-center mt-3">
+                    <form method="dialog">
+                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal 3 -->
+        <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
             <div class="modal-box">
                 <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center">
                 <h3 class="font-bold text-base md:text-xl lg:text-2xl ">Write : Md Ronak Ara Chowdhury</h3>
@@ -246,18 +296,37 @@
             </div>
         </dialog>
 
+        <!-- modal books -->
+        <!-- Modal 1 -->
+        <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+            <div class="modal-box rounded-lg shadow-lg">
+                <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center rounded-lg">
+                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Ronak Ara Chowdhury</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $200</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">This book discusses Java Plotting Song plays
+                    and algorithms. It adapts to new environments and helps improve plating. Reading through real
+                    examples will provide effective learning opportunities.
+                </p>
+                <div class="text-center">
+                    <form method="dialog">
+                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
         <!-- Modal 2 -->
-        <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
-                <img src="./img/images (6).jpg" alt="Book 2" class=" w-full h-72 mb-6">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write : Md Tofail Ahmad Noman</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$400</p>
+        <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+            <div class="modal-box rounded-lg shadow-lg">
+                <img src="./img/images (6).jpg" alt="Book 2" class="w-full h-72 mb-6 rounded-lg">
+                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Tofail Ahmad Noman</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $400</p>
                 <p class="py-4 text-xs md:text-sm font-normal lg:text-base">This book provides a deep understanding of
-                    the fundamentals of data structures and
-                    algorithms. Readers will acquire the skills necessary to develop functional software using data
-                    structure design, functionality, and advanced coding techniques.As the book contains various
-                    examples
-                    and exercises, students will gain skills in solving real-life problems.</p>
+                    the fundamentals of data structures and algorithms. Readers will acquire the skills necessary to
+                    develop functional software using data structure design, functionality, and advanced coding
+                    techniques. As the book contains various examples and exercises, students will gain skills in
+                    solving real-life problems.
+                </p>
                 <div class="text-center">
                     <form method="dialog">
                         <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
@@ -267,17 +336,15 @@
         </dialog>
 
         <!-- Modal 3 -->
-        <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
-                <img src="./img/python.jpg" alt="Book 3" class=" w-full h-72 mb-6 border rounded-md">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write :Md Touhid Hossain</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$300</p>
+        <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+            <div class="modal-box rounded-lg shadow-lg">
+                <img src="./img/python.jpg" alt="Book 3" class="w-full h-72 mb-6 rounded-lg">
+                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Touhid Hossain</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $300</p>
                 <p class="py-4 text-xs md:text-sm lg:text-base">This book provides the fundamentals of Python and the
-                    technical knowledge required for AI.
-                    Readers will gain an understanding of modern machine learning and data analysis. The authors have
-                    used
-                    tutorial and project based teaching methods, which will help the students to develop real life
-                    skills.
+                    technical knowledge required for AI. Readers will gain an understanding of modern machine learning
+                    and data analysis. The authors have used tutorial and project-based teaching methods, which will
+                    help the students to develop real-life skills.
                 </p>
                 <div class="text-center">
                     <form method="dialog">
@@ -288,17 +355,16 @@
         </dialog>
 
         <!-- Modal 4 -->
-        <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
+        <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+            <div class="modal-box rounded-lg shadow-lg">
                 <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg" alt="Book 4"
-                    class=" w-full h-72 mb-6 rounded-md">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write :Md Zahidul Islam</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$250</p>
+                    class="w-full h-72 mb-6 rounded-lg">
+                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Zahidul Islam</h3>
+                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $250</p>
                 <p class="py-4 text-xs md:text-sm lg:text-base">This book covers the fundamentals of web design and
-                    development, useful for both new and
-                    experienced developers. Readers will be introduced to modern web technologies and gain applicable
-                    skills
-                    through this book.</p>
+                    development, useful for both new and experienced developers. Readers will be introduced to modern
+                    web technologies and gain applicable skills through this book.
+                </p>
                 <div class="text-center">
                     <form method="dialog">
                         <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
@@ -306,6 +372,7 @@
                 </div>
             </div>
         </dialog>
+
     </main>
 
     <!-- Footer -->
