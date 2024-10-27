@@ -29,44 +29,59 @@
 </head>
 
 <body class=" text-gray-800">
-        <!-- Navbar -->
-        <nav class="sticky top-0 bg-gradient-to-r from-green-700 to-cyan-500
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-gradient-to-r from-green-700 to-cyan-500
     text-white p-4 z-50">
-            <div class="container mx-auto flex justify-between items-center">
-                <a href="" class="flex items-center">
-                    <img class="w-10 h-10 rounded-full mr-2" src="./img/download.png" alt="Logo">
-                    <div class="text-xl font-bold">Computer Department</div>
-                </a>
-                <div class="hidden md:flex space-x-4">
-                    <a href="#home" class="hover:text-teal-300">Home</a>
-                    <a href="#teacher" class="hover:text-teal-300">Teachers</a>
-                    <a href="#important-books" class="hover:text-teal-300">Books</a>
-                    <div class="text-base border h-7 w-7 bg-white text-center rounded-full">
-                        <i class="fa-solid fa-user text-black"></i>
-                    </div>
-                </div>
-                
-                <div class="md:hidden">
-                    <button class="text-xl text-black">☰</button>
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="" class="flex items-center">
+                <img class="w-10 h-10 rounded-full mr-2" src="./img/download.png" alt="Logo">
+                <div class="text-xl font-bold">Computer Department</div>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-teal-300">Home</a>
+                <a href="#teacher" class="hover:text-teal-300">Teachers</a>
+                <a href="#important-books" class="hover:text-teal-300">Books</a>
+                <div class="text-base border h-7 w-7 bg-white text-center rounded-full">
+                    <i class="fa-solid fa-user text-black"></i>
                 </div>
             </div>
-        </nav>
 
-        <!-- banner Section -->
-        <header style="background-image: url('./img/bg.png');" id="home"
-            class="bg-no-repeat bg-cover text-white text-center h-96">
-            <div class="py-32">
-                <h1 class="text-3xl md:text-4xl font-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
-                    Welcome to the Computer Department
-                </h1>
-                <p class="mt-4 text-lg" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
-                    Empowering Future Tech Leaders
-                </p>
-                <button
-                    class="mt-6 bg-white  py-2 px-4 rounded-md  hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">Explore
-                    Programs</button>
+            <!-- <div class="md:hidden">
+                    <button class="text-xl text-black">☰</button>
+                </div> -->
+            <div class="dropdown dropdown-left md:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu dropdown-content bg-base-100 rounded-box mt-5  w-32  shadow">
+                    <li class="text-black"><a href="#home" class="hover:text-teal-300">Home</a></li>
+                    <li class="text-black"><a href="#teacher" class="hover:text-teal-300">Teachers</a></li>
+                    <li class="text-black"><a href="#important-books" class="hover:text-teal-300">Books</a></li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </nav>
+
+    <!-- banner Section -->
+    <header style="background-image: url('./img/bg.png');" id="home"
+        class="bg-no-repeat bg-cover text-white text-center h-96">
+        <div class="py-32">
+            <h1 class="text-3xl md:text-4xl font-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+                Welcome to the Computer Department
+            </h1>
+            <p class="mt-4 text-lg" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+                Empowering Future Tech Leaders
+            </p>
+            <button
+                class="mt-6 bg-white  py-2 px-4 rounded-md  hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">Explore
+                Programs</button>
+        </div>
+    </header>
 
     <main class=" bg-gray-100">
         <!-- Section About Us -->
@@ -104,7 +119,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Card 1 -->
                     <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
-                        <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir" class="w-32 h-32 rounded-full mx-auto mb-6">
+                        <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
+                            class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
                         <p class="text-gray-600 mt-2">Data Structures Expert</p>
                         <p class="text-gray-500 mt-4">Dr. Stone is known for his contributions to data structure
@@ -116,7 +132,8 @@
 
                     <!-- Card 2 -->
                     <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
-                        <img src="./img/ci.jpg" alt="Md Mohiuddin" class="w-32 h-32 rounded-full mx-auto mb-6">
+                        <img src="./img/ci.jpg" alt="Md Mohiuddin"
+                            class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
                         <p class="text-gray-600 mt-2">Depatment head of Computer Science</p>
                         <p class="text-gray-500 mt-4">Madame Rose has over 30 years of experience in teaching computer
@@ -129,7 +146,7 @@
                     <!-- Card 3 -->
                     <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl">
                         <img src="./img/rupok.jpg " alt="Md: Delowar Hossain"
-                            class="w-32 h-32 rounded-full mx-auto mb-6">
+                            class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
                         <p class="text-gray-600 mt-2">Pioneer in Programming</p>
                         <p class="text-gray-500 mt-4">Dr. Hopper is a legendary computer scientist known for her work in
@@ -209,7 +226,7 @@
 
 
         <!-- modal books -->
-         <!-- Modal 1 -->
+        <!-- Modal 1 -->
         <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
             <div class="modal-box">
                 <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center">
@@ -285,7 +302,6 @@
                 </div>
             </div>
         </dialog>
-
     </main>
 
     <!-- Footer -->
