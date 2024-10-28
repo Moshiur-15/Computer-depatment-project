@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
     <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -32,10 +34,13 @@
             background-color: rgba(255, 255, 255, 0.7);
             /* semi-transparent background */
         }
+        .image-slider {
+            display: none;
+        }
     </style>
 </head>
 
-<body>
+<body style="font-family: 'Nunito', sans-serif;">
     <!-- Navbar -->
     <nav class="navbar sticky top-0 p-4 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
@@ -71,11 +76,10 @@
             </div>
         </div>
     </nav>
-
-    <!-- banner Section -->
-    <header style="background-image: url('./img/bg.png');" id="home"
-        class="bg-no-repeat bg-cover text-white text-center h-96">
-        <div class="py-32">
+    <!-- Banner Section -->
+    <header id="home" class="bg-no-repeat bg-cover text-white text-center h-96 relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="py-20 md:py-28 lg:py-44 relative z-10">
             <h1 class="text-3xl md:text-4xl font-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
                 Welcome to the Computer Department
             </h1>
@@ -83,14 +87,24 @@
                 Empowering Future Tech Leaders
             </p>
             <button
-                class="mt-6 bg-white  py-2 px-4 rounded-md  hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">Explore
-                More</button>
+                class="mt-6 bg-white py-2 px-4 rounded-md hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">
+                Explore More
+            </button>
+        </div>
+
+        <div id="imageSlider" class="absolute inset-0">
+            <img id="slide1" class="image-slider w-full object-cover h-96 lg:h-[500px]" src="./img/bg-3.png"
+                alt="Image 1">
+            <img id="slide2" class="image-slider w-full object-cover h-96 lg:h-[500px]" src="./img/bg-2.jpg"
+                alt="Image 2">
+            <img id="slide3" class="image-slider w-full object-cover h-96 lg:h-[500px]" src="./img/bg-1.jpg"
+                alt="Image 3">
         </div>
     </header>
 
     <main class=" bg-gray-200 p-8 md:p-0">
         <!-- Section About Us -->
-        <section id="about" class="py-3 md:py-8 lg:py-16">
+        <section id="about" class="py-3 md:py-8 lg:pt-44">
             <div class="container mx-auto text-center">
                 <h2 class="text-2xl md:text-3xl font-bold md:mb-8 text-teal-600">About Us</h2>
                 <p class="text-sm md:text-lg leading-relaxed text-gray-600 p-5 md:p-0 text-center">
@@ -121,50 +135,58 @@
                 </p>
 
                 <!-- Card Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 flex-grow">
                     <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
-                        onclick="my_modal_5.showModal()">
+                    <div
+                        class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl flex flex-col">
                         <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
-                        <p class="text-gray-600 mt-2">Programing Expart</p>
+                        <p class="text-gray-600 mt-2">Programming Expert</p>
                         <p class="text-gray-500 mt-4">A dedicated Programming Instructor with a strong commitment to
                             academic excellence, known for his helpful guidance and support in developing students’
                             coding skills.</p>
-                        <button
-                            class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
-                            More</button>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_5.showModal()"
+                                class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
+                                More</button>
+                        </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
-                        onclick="my_modal_6.showModal()">
+                    <div
+                        class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl flex flex-col">
                         <img src="./img/ci.jpg" alt="Md Mohiuddin"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
                         <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
                         <p class="text-gray-500 mt-4">Department, recognized for his inspiring leadership and invaluable
                             mentorship, guiding students in both academics and competitive events.</p>
-                        <button
-                            class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
-                            More</button>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_6.showModal()"
+                                class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
+                                More</button>
+                        </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl"
-                        onclick="my_modal_7.showModal()">
-                        <img src="./img/rupok.jpg " alt="Md: Delowar Hossain"
+                    <div
+                        class="bg-white p-6 rounded-lg border transform hover:scale-105 hover:drop-shadow-2xl flex flex-col">
+                        <img src="./img/rupok.jpg" alt="Md: Delowar Hossain"
                             class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                         <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
-                        <p class="text-gray-600 mt-2">Pioneer in Programming</p>
-                        <p class="text-gray-500 mt-4">Dr. Hopper is a legendary computer scientist known for her work in
-                            developing the first compiler and advancing programming languages.</p>
-                        <button
-                            class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
-                            More</button>
+                        <p class="text-gray-600 mt-2">Data Structure Expert</p>
+                        <p class="text-gray-500 mt-4">Md. Deblowa Pratik is a very important data structure expert and
+                            is known for his depth of algorithmic data organization techniques.</p>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_7.showModal()"
+                                class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">View
+                                More</button>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </section>
 
@@ -200,7 +222,8 @@
                             understand, maintain, and improve.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_2.showModal()">View Details</button>
+                            onclick="my_modal_2.showModal()">View Details
+                        </button>
                     </div>
 
                     <!-- Card 3 -->
@@ -211,7 +234,8 @@
                             state-of-the-art practices.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_3.showModal()">View Details</button>
+                            onclick="my_modal_3.showModal()">View Details
+                        </button>
                     </div>
 
                     <!-- Card 4 -->
@@ -223,13 +247,13 @@
                             efficient software developer.</p>
                         <button
                             class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-                            onclick="my_modal_4.showModal()">View Details</button>
+                            onclick="my_modal_4.showModal()">View Details
+                        </button>
                     </div>
                 </div>
 
             </div>
         </section>
-
 
         <!-- Modal  teacher -->
         <!-- Modal 1 -->
@@ -239,7 +263,7 @@
                     class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                 <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
                 <p class="text-gray-600 mt-2">Programing Expart</p>
-                <p class="text-gray-500 mt-4">Md. Ahsan Habib Abir is a passionate programming instructor known for his
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Ahsan Habib Abir is a passionate programming instructor known for his
                     exceptional teaching style and commitment to academic excellence. His guidance in programming
                     fundamentals and advanced concepts has greatly enhanced our skills and understanding. Always
                     approachable and supportive, he provides invaluable advice and assistance both inside and outside
@@ -261,7 +285,7 @@
                     class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
                 <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
                 <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
-                <p class="text-gray-500 mt-4">Md. Mohiuddin, as the head of the Computer Science Department, brings
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Mohiuddin, as the head of the Computer Science Department, brings
                     invaluable guidance and support to students both academically and in extracurricular activities. He
                     is not only a dedicated academic mentor but also an inspiring coach, leading our teams through
                     various competitions with a remarkable blend of knowledge and leadership. His commitment to helping
@@ -279,14 +303,15 @@
         <!-- Modal 3 -->
         <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
             <div class="modal-box">
-                <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl ">Write : Md Ronak Ara Chowdhury</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize :$200</p>
-                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">This book discusses Java Plotting Song plays
-                    and algorithms. It adapts to new
-                    environments
-                    and helps improve plating. Reading through real examples will provide effective learning
-                    opportunities.
+                <img src="./img/rupok.jpg" alt="Md: Delowar Hossain"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
+                <p class="text-gray-600 mt-2">Data Structure Expert</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Delowar Hossain is a highly experienced
+                    Data Structure Expert known for his profound understanding of algorithms and data organization
+                    techniques. With a robust academic background and practical experience in software development, he
+                    specializes in designing efficient data structures that enhance the performance and scalability of
+                    applications.
                 </p>
                 <div class="text-center">
                     <form method="dialog">
@@ -384,7 +409,8 @@
                 <a href="#" class="hover:text-teal-300">Terms of Service</a>
             </div>
             <div class="mt-4">
-                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                <a target="_blank" href="https://patuakhali.polytech.gov.bd/"
+                    class="text-white hover:text-teal-300 mx-2">
                     <i class="fab fa-facebook"></i>
                 </a>
                 <a href="#" class="text-white hover:text-teal-300 mx-2">
@@ -399,5 +425,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.image-slider');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+        setInterval(nextSlide, 2000);
+    </script>
 </body>
+
 </html>
