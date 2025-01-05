@@ -9,76 +9,126 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
-    <!-- font family -->
+    <!-- Font Family -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-200 pb-72 lg:pb-80" style="font-family: 'Nunito', sans-serif;">
-    <nav class="sticky top-0 bg-gradient-to-r from-blue-500 to-teal-200 text-white p-4 z-50">
+<body class="" style="font-family: 'Nunito', sans-serif;">
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-gradient-to-r from-blue-500 to-teal-400 text-white p-4 shadow-lg z-50">
         <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo and Title -->
             <div class="flex items-center">
                 <img class="w-8 md:w-10 rounded-full mr-2" src="./img/download.png" alt="Logo">
-                <div class="text-base md:text-xl font-bold">Computer Department</div>
+                <span class="text-lg md:text-xl font-bold">Computer Department</span>
             </div>
-            <div class="hidden md:block text-2xl border h-10 w-10 bg-white text-center rounded-full">
-                <i class="fa-solid fa-user text-black"></i>
+            <!-- Profile Icon -->
+            <div class="hidden md:block">
+                <div
+                    class="h-10 w-10 flex items-center justify-center bg-white text-black text-2xl rounded-full border">
+                    <i class="fa-solid fa-user"></i>
+                </div>
             </div>
+            <!-- Mobile Menu -->
             <div class="md:hidden">
-                <button class="text-xl" aria-label="Menu">☰</button>
+                <button class="text-xl focus:outline-none" aria-label="Menu">☰</button>
             </div>
         </div>
     </nav>
 
-    <div class="hero p-5">
-        <div class="hero-content flex-col">
-            <div class="text-center lg:text-center">
-                <h1 class="text-xl md:text-2xl lg:text-4xl font-bold">Login now!</h1>
-                <p class="py-6 max-w-xl text-sm md:text-base lg:text-xl">
-                    If you want to win home page. Then you need to login. You must enter your email or password to
-                    login.
+    <!-- Hero Section -->
+    <div class="hero p-5 min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+        <div class="hero-content flex flex-col lg:flex-row lg:justify-center lg:items-center gap-8">
+            <!-- Text Content -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800">
+                    Login now!
+                </h1>
+                <p class="py-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg lg:text-xl leading-relaxed text-gray-600">
+                    Access your personalized dashboard by logging in with your email and password. Stay updated and
+                    connected!
                 </p>
             </div>
-            <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
-                <form class="card-body" onsubmit="return validateAndRedirect()">
+
+            <!-- Login Card -->
+            <div
+                class="card bg-white w-full max-w-md lg:max-w-lg rounded-2xl shadow-xl hover:shadow-2xl transform transition duration-300">
+                <form class="card-body space-y-4" onsubmit="return validateAndRedirect()">
+                    <!-- Email Input -->
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Email</span>
+                            <span class="label-text font-medium text-gray-700">Email</span>
                         </label>
-                        <input type="email" id="email" placeholder="Enter your email" class="input input-bordered"
+                        <input type="email" id="email" placeholder="Enter your email"
+                            class="input input-bordered border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-400 focus:outline-none"
                             required />
                     </div>
+
+                    <!-- Password Input -->
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Password</span>
+                            <span class="label-text font-medium text-gray-700">Password</span>
                         </label>
                         <input type="password" id="password" placeholder="Enter your password"
-                            class="input input-bordered" required />
+                            class="input input-bordered border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-400 focus:outline-none"
+                            required />
                         <label class="label">
-                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                            <a href="#" class="label-text-alt text-teal-500 hover:text-teal-600 underline text-sm">
+                                Forgot password?
+                            </a>
                         </label>
                     </div>
+
+                    <!-- Login Button -->
                     <div class="form-control mt-6">
                         <button type="submit"
-                            class="btn bg-gradient-to-r from-teal-400 to-blue-500 w-full">Login</button>
+                            class="btn bg-gradient-to-r from-teal-400 to-blue-500 w-full text-white font-semibold py-2 rounded-lg hover:from-teal-500 hover:to-blue-600 transform hover:scale-105 transition-transform duration-200">
+                            Login
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Computer Science Department. All rights reserved.</p>
+            <div class="space-x-4 mt-4">
+                <a href="#" class="hover:text-teal-300">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-300">Terms of Service</a>
+            </div>
+            <div class="mt-4">
+                <a target="_blank" href="https://patuakhali.polytech.gov.bd/"
+                    class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script>
         function validateAndRedirect() {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
             if (!email || !password) {
                 alert("Please fill in both email and password.");
                 return false;
             }
-            // Here, you could add logic to handle actual login authentication before redirecting
+
+            // Simulate successful login
             window.location.href = "./home.html";
-            return false; // Prevent form submission
+            return false; // Prevent default form submission
         }
     </script>
 </body>
