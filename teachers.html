@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Nunito', sans-serif;" class="bg-white text-black">
+    <nav class="navbar sticky top-0 p-4 z-50 shadow-md bg-white ">
+        <div class="container mx-auto flex justify-between items-center px-3 xl:px-36">
+            <a href="./home.html" class="flex items-center">
+                <img class="w-8 md:w-10 rounded-full mr-2 border" src="./img/download.png" alt="Logo" />
+                <div class="text-base md:text-xl font-bold text-black">Computer Department</div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="./home.html" class="nav-link">HOME</a>
+                <a href="./teachers.html" class="nav-link">TEACHERS</a>
+                <a href="./club.html" class="nav-link">CLUB</a>
+                <a href="./gallery.html" class="nav-link">GALLERY</a>
+                <a href="./contact.html" class="nav-link">CONTACT</a>
+                <div
+                    class="text-base border h-8 w-8 bg-black text-white text-center rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden relative">
+                <button id="mobile-menu-button" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </button>
+                <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50">
+                    <a href="./home.html" class="block px-4 py-2 mobile-nav-link">HOME</a>
+                    <a href="./teachers.html" class="block px-4 py-2 mobile-nav-link">TEACHERS</a>
+                    <a href="./club.html" class="block px-4 py-2 mobile-nav-link">CLUB</a>
+                    <a href="./gallery.html" class="block px-4 py-2 mobile-nav-link">GALLERY</a>
+                    <a href="./contact.html" class="block px-4 py-2 mobile-nav-link">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="teacher" class="py-16 bg-blue-50/60 min-h-screen">
+        <div class="container mx-auto text-center px-3 xl:px-36">
+            <!-- Section Heading -->
+            <h2 class="text-3xl md:text-4xl mb-3 font-extrabold">MEET OUR FACULTY</h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-600 mb-12 max-w-3xl mx-auto">
+                Our distinguished mentors and professionals bring their expertise and passion to inspire excellence
+                and innovation.
+            </p>
+
+            <!-- Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
+                <!-- Card 1 -->
+                <div class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
+                    <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
+                        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Md Ahsan Habib Abir</h3>
+                    <p class="text-gray-600 mb-4">Programming Expert</p>
+                    <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                        A dedicated Programming Instructor with a strong commitment to academic excellence, known
+                        for his guidance in developing students’ coding skills.
+                    </p>
+                    <div class="mt-auto">
+                        <button onclick="my_modal_5.showModal()"
+                            class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                            View More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
+                    <img src="./img/ci.jpg" alt="Md Mohiuddin"
+                        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Md Mohiuddin</h3>
+                    <p class="text-gray-600 mb-4">Head of Computer Science</p>
+                    <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                        Known for his inspiring leadership and mentorship, guiding students in both academics and
+                        competitive events.
+                    </p>
+                    <div class="mt-auto">
+                        <button onclick="my_modal_6.showModal()"
+                            class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                            View More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
+                    <img src="./img/rupok.jpg" alt="Md Delowar Hossain"
+                        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Md Delowar Hossain</h3>
+                    <p class="text-gray-600 mb-4">Data Structure Expert</p>
+                    <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                        Renowned for his expertise in data structures and algorithmic techniques, helping students
+                        master complex concepts.
+                    </p>
+                    <div class="mt-auto">
+                        <button onclick="my_modal_7.showModal()"
+                            class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                            View More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
+                    <img src="./img/2025-04-10-16-48-12944e6162759fb2c6c17cd82a5913f9.jpg" alt="Md Delowar Hossain"
+                        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Hira Mali</h3>
+                    <p class="text-gray-600 mb-4">Data Communication Expert</p>
+                    <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                        Currently teaching <strong>Data Communication</strong> with a focus on network protocols and
+                        digital transmission.
+                    </p>
+                    <div class="mt-auto">
+                        <button onclick="my_modal_8.showModal()"
+                            class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                            View More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
+                    <img src="./img/2025-04-10-16-47-a68480a83e7a5a736a523b6522494cf3.jpg" alt="Md Al-Shahriar Rokon"
+                        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
+                    <h3 class="text-xl font-bold text-teal-600 mb-2">Md Al-Shahriar Rokon</h3>
+                    <p class="text-gray-600 mb-4">Operating System Expert</p>
+                    <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                        Renowned for his expertise in operating systems and system-level programming, helping students
+                        master complex concepts.
+                    </p>
+                    <div class="mt-auto">
+                        <button onclick="my_modal_9.showModal()"
+                            class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal  teacher -->
+    <section>
+
+        <!-- Modal 1 -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box bg-white text-black">
+                <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
+                <p class="text-gray-600 mt-2">Programing Expart</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Ahsan Habib Abir is a passionate
+                    programming instructor known for his
+                    exceptional teaching style and commitment to academic excellence. His guidance in programming
+                    fundamentals and advanced concepts has greatly enhanced our skills and understanding. Always
+                    approachable and supportive, he provides invaluable advice and assistance both inside and
+                    outside
+                    the classroom, helping students to build confidence in coding. His dedication to his students’
+                    success and his own academic achievements make him a highly respected and valued mentor in our
+                    department.</p>
+                <div class="text-center mt-2">
+                    <form method="dialog">
+                        <button
+                            class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal 2 -->
+        <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box bg-white text-black">
+                <img src="./img/ci.jpg" alt="Md Mohiuddin"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
+                <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Mohiuddin, as the head of the
+                    Computer
+                    Science Department, brings
+                    invaluable guidance and support to students both academically and in extracurricular activities.
+                    He
+                    is not only a dedicated academic mentor but also an inspiring coach, leading our teams through
+                    various competitions with a remarkable blend of knowledge and leadership. His commitment to
+                    helping
+                    students succeed is evident in the time he spends guiding us through complex subjects and
+                    fostering
+                    our skills for success beyond the classroom. His dedication and insights inspire us to excel in
+                    every pursuit.</p>
+                <div class="text-center mt-3">
+                    <form method="dialog">
+                        <button
+                            class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal 3 -->
+        <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box bg-white text-black">
+                <img src="./img/rupok.jpg" alt="Md: Delowar Hossain"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
+                <p class="text-gray-600 mt-2">Data Structure Expert</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Delowar Hossain is a highly
+                    experienced
+                    Data Structure Expert known for his profound understanding of algorithms and data organization
+                    techniques. With a robust academic background and practical experience in software development,
+                    he
+                    specializes in designing efficient data structures that enhance the performance and scalability
+                    of
+                    applications.
+                </p>
+                <div class="text-center">
+                    <form method="dialog">
+                        <button
+                            class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="my_modal_8" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box bg-white text-black">
+                <img src="./img/2025-04-10-16-48-12944e6162759fb2c6c17cd82a5913f9.jpg" alt="Hira Mali"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Hira Mali</h3>
+                <p class="text-gray-600 mt-2">Data Communication Expert</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">
+                    Currently teaching Data Communication with a strong emphasis on network protocols and digital
+                    transmission techniques.
+                    He guides students through the intricacies of data encoding, signal processing, and error
+                    correction, ensuring they grasp both theoretical concepts and practical applications in modern
+                    communication systems.
+                </p>
+                <div class="text-center">
+                    <form method="dialog">
+                        <button
+                            class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="my_modal_9" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+            <div class="modal-box bg-white text-black">
+                <img src="./img/2025-04-10-16-47-a68480a83e7a5a736a523b6522494cf3.jpg" alt="Md Al-Shahriar Rokon"
+                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                <h3 class="text-xl font-bold text-teal-600">Md Al-Shahriar Rokon</h3>
+                <p class="text-gray-600 mt-2">Operating System Expert</p>
+                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">
+                    Renowned for his deep expertise in operating systems and system-level programming, he excels at
+                    simplifying complex topics for his students.
+                    By blending detailed explanations with real-world examples, he helps learners master process
+                    scheduling, memory management, and kernel operations to build a solid foundation for advanced
+                    computing challenges.
+                </p>
+                <div class="text-center">
+                    <form method="dialog">
+                        <button
+                            class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </section>
+
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Computer Science Department. All rights reserved.</p>
+            <div class="space-x-4 mt-4">
+                <a href="#" class="hover:text-teal-300">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-300">Terms of Service</a>
+            </div>
+            <div class="mt-4">
+                <a target="_blank" href="https://patuakhali.polytech.gov.bd/"
+                    class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Only style desktop nav links
+        const navStyle = "inline-block hover:text-blue-800 font-bold text-sm";
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.className = navStyle;
+        });
+
+        // Responsive mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Hide menu when a mobile link is clicked
+            mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -14,20 +14,6 @@
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    },
-                    backgroundImage: {
-                        'bg': "url('/img/bg.png')"
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .navbar {
             backdrop-filter: blur(4px);
@@ -43,40 +29,47 @@
 
 <body style="font-family: 'Nunito', sans-serif;">
     <!-- Navbar -->
-    <nav class="navbar sticky top-0 p-4 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="" class="flex items-center">
-                <img class="w-8 md:w-10 rounded-full mr-2 border" src="./img/download.png" alt="Logo">
-                <div class="text-base md:text-xl font-bold">Computer Department</div>
+    <nav class="navbar sticky top-0 p-4 z-50 shadow-md bg-white">
+        <div class="container mx-auto flex justify-between items-center px-3 xl:px-36">
+            <a href="./home.html" class="flex items-center">
+                <img class="w-8 md:w-10 rounded-full mr-2 border" src="./img/download.png" alt="Logo" />
+                <div class="text-base md:text-xl font-bold text-black">Computer Department</div>
             </a>
-            <div class="hidden md:flex space-x-4">
-                <a href="#home" class="hover:text-cyan-500">Home</a>
-                <a href="#teacher" class="hover:text-cyan-500">Teachers</a>
-                <a href="#important-books" class="hover:text-cyan-500">Books</a>
-                <a href="./club.html" class="hover:text-cyan-500">Club</a>
-                <div class="text-base border h-7 w-7 bg-black text-center rounded-full">
-                    <i class="fa-solid fa-user text-white"></i>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="./home.html" class="nav-link">HOME</a>
+                <a href="./teachers.html" class="nav-link">TEACHERS</a>
+                <a href="./club.html" class="nav-link">CLUB</a>
+                <a href="./gallery.html" class="nav-link">GALLERY</a>
+                <a href="./contact.html" class="nav-link">CONTACT</a>
+                <div
+                    class="text-base border h-8 w-8 bg-black text-white text-center rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-user"></i>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
-            <div class="dropdown dropdown-left md:hidden">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            <div class="md:hidden relative">
+                <button id="mobile-menu-button" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
+                </button>
+                <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50">
+                    <a href="./home.html" class="block px-4 py-2 mobile-nav-link">HOME</a>
+                    <a href="./teachers.html" class="block px-4 py-2 mobile-nav-link">TEACHERS</a>
+                    <a href="./club.html" class="block px-4 py-2 mobile-nav-link">CLUB</a>
+                    <a href="./gallery.html" class="block px-4 py-2 mobile-nav-link">GALLERY</a>
+                    <a href="./contact.html" class="block px-4 py-2 mobile-nav-link">CONTACT</a>
                 </div>
-                <ul tabindex="0" class="menu dropdown-content bg-white rounded-box mt-5 w-32 shadow">
-                    <li><a href="#home" class="hover:text-cyan-500">Home</a></li>
-                    <li><a href="#teacher" class="hover:text-cyan-500">Teachers</a></li>
-                    <li><a href="#important-books" class="hover:text-cyan-500">Books</a></li>
-                    <li><a href="./club.html" class="hover:text-cyan-500">Club</a></li>
-                </ul>
             </div>
         </div>
     </nav>
+
+
     <!-- Banner Section -->
     <header id="home" class="bg-no-repeat bg-cover text-white text-center h-96 relative">
         <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -88,7 +81,7 @@
                 Empowering Future Tech Leaders
             </p>
             <button
-                class="mt-6 bg-white py-2 px-4 rounded-md hover:text-white transition-colors bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500">
+                class="mt-6 px-6 py-2 hover:scale-105 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 cursor-auto">
                 Explore More
             </button>
         </div>
@@ -106,299 +99,341 @@
 
     <main class=" bg-gray-200 p-8 md:p-0">
         <!-- Section About Us -->
-        <section id="about" class="py-3 md:py-8 lg:pt-44">
-            <div class="container mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold md:mb-8 text-teal-600">About Us</h2>
-                <p class="text-sm md:text-lg leading-relaxed text-gray-600 p-5 md:p-0 text-center">
-                    Patuakhali Polytechnic Institute is one of the best polytechnics in Bangladesh. 1st year class of
-                    Diploma-in-Engineering in Electrical Technology in 1991 only 40 It was established with public
-                    students
-                    and the Institute has since expanded greatly with the growing demand for middle level technical
-                    manpower
-                    at home and abroad. The institute now offers courses in 5 (five) technologies.
-                    Our vision is to be a highly effective polytechnic institute in the country and an innovative
-                    provider
-                    of higher technical education and our industrial, higher education institution.And to create leading
-                    centers of excellence to create sustainable futures for our students as measured and accepted by
-                    foreign
-                    recruiting agencies.In a changing world. The institute not only produces high level of achievement
-                    of
-                    professionals but also creates a cohort to serve the next generation.
+        <section id="about" class="py-3 md:py-8 lg:pt-44 bg-blue-50/70">
+            <div class="container mx-auto text-center px-3 xl:px-36">
+                <h2 class="text-2xl md:text-2xl font-bold md:mb-8 text-green-600">ABOUT US</h2>
+                <p class="text-[16px] lg:text-[20px] leading-relaxed text-gray-600 p-5 md:p-0 text-justify">
+                    Patuakhali Polytechnic Institute is recognized as one of the leading polytechnic institutes in
+                    Bangladesh. It began its journey in 1991 with the introduction of the Diploma-in-Engineering in
+                    Electrical Technology, enrolling just 40 students in its first batch.
+
+                    Over the years, the institute has grown significantly to meet the increasing demand for mid-level
+                    technical professionals both nationally and internationally. Today, the institute offers diploma
+                    programs in five major technologies, providing students with a strong foundation in practical and
+                    theoretical skills.
+
+                    Our vision is to become one of the most effective and innovative polytechnic institutes in the
+                    country. We aim to be a center of excellence in technical education, closely aligned with the needs
+                    of industry, higher education, and international employers.
+
+                    In a rapidly changing world, our mission goes beyond academic excellence — we strive to shape
+                    future-ready professionals who are capable of contributing meaningfully to society. The institute
+                    not only produces skilled graduates but also nurtures leadership, innovation, and service to the
+                    next generation.
                 </p>
             </div>
         </section>
 
         <!-- Depatment teachers -->
-        <section id="teacher" class="py-16 ">
-            <div class="container mx-auto text-center">
+        <section id="teacher" class="py-16 bg-white">
+            <div class="container mx-auto text-center px-3 xl:px-36">
                 <!-- Section Heading -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-teal-600">Meet Our Faculty</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-green-600">MEET OUR FACULTY</h2>
                 <p class="text-base md:text-lg leading-relaxed text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Our distinguished mentors and professionals bring their expertise and passion to inspire excellence and innovation.
+                    Our distinguished mentors and professionals bring their expertise and passion to inspire excellence
+                    and innovation.
                 </p>
-        
+
                 <!-- Card Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
                     <!-- Card 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
                         <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
                             class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
                         <h3 class="text-xl font-bold text-teal-600 mb-2">Md Ahsan Habib Abir</h3>
                         <p class="text-gray-600 mb-4">Programming Expert</p>
-                        <p class="text-gray-500 leading-relaxed mb-6">
-                            A dedicated Programming Instructor with a strong commitment to academic excellence, known for his guidance in developing students’ coding skills.
+                        <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                            A dedicated Programming Instructor with a strong commitment to academic excellence, known
+                            for his guidance in developing students’ coding skills.
                         </p>
-                        <button onclick="my_modal_5.showModal()"
-                            class="w-full py-2 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-lg font-medium text-lg hover:from-pink-500 hover:to-orange-500 transform hover:scale-105 transition-transform duration-500">
-                            View More
-                        </button>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_5.showModal()"
+                                class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                                View More
+                            </button>
+                        </div>
                     </div>
-        
+
                     <!-- Card 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
                         <img src="./img/ci.jpg" alt="Md Mohiuddin"
                             class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
                         <h3 class="text-xl font-bold text-teal-600 mb-2">Md Mohiuddin</h3>
                         <p class="text-gray-600 mb-4">Head of Computer Science</p>
-                        <p class="text-gray-500 leading-relaxed mb-6">
-                            Known for his inspiring leadership and mentorship, guiding students in both academics and competitive events.
+                        <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                            Known for his inspiring leadership and mentorship, guiding students in both academics and
+                            competitive events.
                         </p>
-                        <button onclick="my_modal_6.showModal()"
-                            class="w-full py-2 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-lg font-medium text-lg hover:from-pink-500 hover:to-orange-500 transform hover:scale-105 transition-transform duration-500">
-                            View More
-                        </button>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_6.showModal()"
+                                class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                                View More
+                            </button>
+                        </div>
                     </div>
-        
+
                     <!-- Card 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="p-6 hover:shadow-lg bg-slate-200/50 transition-transform duration-500 flex flex-col h-full">
                         <img src="./img/rupok.jpg" alt="Md Delowar Hossain"
                             class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gradient-to-r from-teal-400 to-blue-500">
                         <h3 class="text-xl font-bold text-teal-600 mb-2">Md Delowar Hossain</h3>
                         <p class="text-gray-600 mb-4">Data Structure Expert</p>
-                        <p class="text-gray-500 leading-relaxed mb-6">
-                            Renowned for his expertise in data structures and algorithmic techniques, helping students master complex concepts.
+                        <p class="text-gray-500 leading-relaxed mb-6 flex-grow">
+                            Renowned for his expertise in data structures and algorithmic techniques, helping students
+                            master complex concepts.
                         </p>
-                        <button onclick="my_modal_7.showModal()"
-                            class="w-full py-2 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-lg font-medium text-lg hover:from-pink-500 hover:to-orange-500 transform hover:scale-105 transition-transform duration-500">
-                            View More
-                        </button>
+                        <div class="mt-auto">
+                            <button onclick="my_modal_7.showModal()"
+                                class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 w-full">
+                                View More
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-         
-        
 
         <!-- Important Books Section -->
-        <section id="important-books" class="py-5 md:py-16">
-            <div class="container mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-5 text-teal-600">Our Important Books</h2>
+        <section id="important-books" class="py-5 md:py-16 bg-blue-50/70">
+            <div class="container mx-auto text-center px-3 xl:px-36">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-5 text-green-600">OUR IMPORTANT BOOKS</h2>
                 <p class="text-sm md:text-lg leading-relaxed text-gray-600 mb-5 md:mb-12 max-w-xl mx-auto">
                     Explore some of the most important books that have shaped our understanding and learning in the
                     computer
                     science field.
                 </p>
                 <!-- Card Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                     <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow ">
+                    <div class="bg-white p-6 hover:shadow-xl duration-300 flex flex-col">
                         <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-32 h-32 mx-auto mb-6 rounded">
                         <h3 class="text-xl font-bold text-teal-600">Java Programming</h3>
-                        <p class="text-gray-500 mt-4">A comprehensive guide to algorithms, essential for anyone studying
-                            or working in computer science.</p>
+                        <p class="text-gray-500 mt-4 flex-grow">A comprehensive guide to algorithms, essential for
+                            anyone studying or working in computer science.</p>
                         <button
-                            class="mt-6 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
+                            class="mt-4 px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300"
                             onclick="my_modal_1.showModal()">
                             View Details
                         </button>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <img src="./img/images (6).jpg" alt="Book 2" class="w-32 h-32 mx-auto mb-6 rounded border-none">
+                    <div class="bg-white p-6 hover:shadow-xl duration-300 flex flex-col">
+                        <img src="./img/images (6).jpg" alt="Book 2" class="w-32 h-32 mx-auto mb-6 rounded">
                         <h3 class="text-xl font-bold text-teal-600">Data Structure</h3>
-                        <p class="text-gray-500 mt-4">This book teaches you how to write code that is easy to
+                        <p class="text-gray-500 mt-4 flex-grow">This book teaches you how to write code that is easy to
                             understand, maintain, and improve.</p>
                         <button
-                            class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
+                            class="mt-4 px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300"
                             onclick="my_modal_2.showModal()">View Details
                         </button>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <img src="./img/python.jpg" alt="Book 3" class="w-32 h-32 mx-auto mb-6 border rounded">
+                    <div class="bg-white p-6 hover:shadow-xl duration-300 flex flex-col">
+                        <img src="./img/python.jpg" alt="Book 3" class="w-32 h-32 mx-auto mb-6 rounded">
                         <h3 class="text-xl font-bold text-teal-600">Python</h3>
-                        <p class="text-gray-500 mt-4">An essential textbook on AI, covering fundamental concepts and
-                            state-of-the-art practices.</p>
+                        <p class="text-gray-500 mt-4 flex-grow">An essential textbook on AI, covering fundamental
+                            concepts and state-of-the-art practices.</p>
                         <button
-                            class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
+                            class="mt-4 px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300"
                             onclick="my_modal_3.showModal()">View Details
                         </button>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-6 hover:shadow-xl duration-300 flex flex-col">
                         <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg"
-                            alt="Book 4" class="w-32 h-32 mx-auto border rounded mb-6">
+                            alt="Book 4" class="w-32 h-32 mx-auto mb-6 rounded">
                         <h3 class="text-xl font-bold text-teal-600">Web Design & Development</h3>
-                        <p class="text-gray-500 mt-4">This book offers practical advice for becoming a better and more
-                            efficient software developer.</p>
+                        <p class="text-gray-500 mt-4 flex-grow">This book offers practical advice for becoming a better
+                            and more efficient software developer.</p>
                         <button
-                            class="mt-6 text-white py-2 px-4 rounded-md bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500"
+                            class="mt-4 px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300"
                             onclick="my_modal_4.showModal()">View Details
                         </button>
                     </div>
+
                 </div>
+
 
             </div>
         </section>
 
         <!-- Modal  teacher -->
-        <!-- Modal 1 -->
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
-                <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
-                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
-                <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
-                <p class="text-gray-600 mt-2">Programing Expart</p>
-                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Ahsan Habib Abir is a passionate
-                    programming instructor known for his
-                    exceptional teaching style and commitment to academic excellence. His guidance in programming
-                    fundamentals and advanced concepts has greatly enhanced our skills and understanding. Always
-                    approachable and supportive, he provides invaluable advice and assistance both inside and outside
-                    the classroom, helping students to build confidence in coding. His dedication to his students’
-                    success and his own academic achievements make him a highly respected and valued mentor in our
-                    department.</p>
-                <div class="text-center mt-2">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
-                </div>
-            </div>
-        </dialog>
+        <section>
 
-        <!-- Modal 2 -->
-        <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
-                <img src="./img/ci.jpg" alt="Md Mohiuddin"
-                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
-                <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
-                <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
-                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Mohiuddin, as the head of the Computer
-                    Science Department, brings
-                    invaluable guidance and support to students both academically and in extracurricular activities. He
-                    is not only a dedicated academic mentor but also an inspiring coach, leading our teams through
-                    various competitions with a remarkable blend of knowledge and leadership. His commitment to helping
-                    students succeed is evident in the time he spends guiding us through complex subjects and fostering
-                    our skills for success beyond the classroom. His dedication and insights inspire us to excel in
-                    every pursuit.</p>
-                <div class="text-center mt-3">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
+            <!-- Modal 1 -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+                <div class="modal-box">
+                    <img src="./img/abir.jpg" alt="Md Ahsan Habib Abir"
+                        class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                    <h3 class="text-xl font-bold text-teal-600">Md Ahsan Habib Abir </h3>
+                    <p class="text-gray-600 mt-2">Programing Expart</p>
+                    <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Ahsan Habib Abir is a passionate
+                        programming instructor known for his
+                        exceptional teaching style and commitment to academic excellence. His guidance in programming
+                        fundamentals and advanced concepts has greatly enhanced our skills and understanding. Always
+                        approachable and supportive, he provides invaluable advice and assistance both inside and
+                        outside
+                        the classroom, helping students to build confidence in coding. His dedication to his students’
+                        success and his own academic achievements make him a highly respected and valued mentor in our
+                        department.</p>
+                    <div class="text-center mt-2">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </dialog>
+            </dialog>
 
-        <!-- Modal 3 -->
-        <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
-            <div class="modal-box">
-                <img src="./img/rupok.jpg" alt="Md: Delowar Hossain"
-                    class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
-                <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
-                <p class="text-gray-600 mt-2">Data Structure Expert</p>
-                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Delowar Hossain is a highly experienced
-                    Data Structure Expert known for his profound understanding of algorithms and data organization
-                    techniques. With a robust academic background and practical experience in software development, he
-                    specializes in designing efficient data structures that enhance the performance and scalability of
-                    applications.
-                </p>
-                <div class="text-center">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
+            <!-- Modal 2 -->
+            <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+                <div class="modal-box">
+                    <img src="./img/ci.jpg" alt="Md Mohiuddin"
+                        class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                    <h3 class="text-xl font-bold text-teal-600">Md Mohiuddin</h3>
+                    <p class="text-gray-600 mt-2">The Head of the Computer Science</p>
+                    <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Mohiuddin, as the head of the
+                        Computer
+                        Science Department, brings
+                        invaluable guidance and support to students both academically and in extracurricular activities.
+                        He
+                        is not only a dedicated academic mentor but also an inspiring coach, leading our teams through
+                        various competitions with a remarkable blend of knowledge and leadership. His commitment to
+                        helping
+                        students succeed is evident in the time he spends guiding us through complex subjects and
+                        fostering
+                        our skills for success beyond the classroom. His dedication and insights inspire us to excel in
+                        every pursuit.</p>
+                    <div class="text-center mt-3">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </dialog>
+            </dialog>
+
+            <!-- Modal 3 -->
+            <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle p-8 md:p-0">
+                <div class="modal-box">
+                    <img src="./img/rupok.jpg" alt="Md: Delowar Hossain"
+                        class="w-36 h-36 rounded-full mx-auto mb-6 border-2 border-teal-400">
+                    <h3 class="text-xl font-bold text-teal-600">Md Delowar Hossain</h3>
+                    <p class="text-gray-600 mt-2">Data Structure Expert</p>
+                    <p class="py-4 font-normal text-xs md:text-sm lg:text-base">Md. Delowar Hossain is a highly
+                        experienced
+                        Data Structure Expert known for his profound understanding of algorithms and data organization
+                        techniques. With a robust academic background and practical experience in software development,
+                        he
+                        specializes in designing efficient data structures that enhance the performance and scalability
+                        of
+                        applications.
+                    </p>
+                    <div class="text-center">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
 
         <!-- modal books -->
-        <!-- Modal 1 -->
-        <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
-            <div class="modal-box rounded-lg shadow-lg">
-                <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center rounded-lg">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Ronak Ara Chowdhury</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $200</p>
-                <p class="py-4 font-normal text-xs md:text-sm lg:text-base">This book discusses Java Plotting Song plays
-                    and algorithms. It adapts to new environments and helps improve plating. Reading through real
-                    examples will provide effective learning opportunities.
-                </p>
-                <div class="text-center">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
-                </div>
-            </div>
-        </dialog>
+        <section>
 
-        <!-- Modal 2 -->
-        <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
-            <div class="modal-box rounded-lg shadow-lg">
-                <img src="./img/images (6).jpg" alt="Book 2" class="w-full h-72 mb-6 rounded-lg">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Tofail Ahmad Noman</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $400</p>
-                <p class="py-4 text-xs md:text-sm font-normal lg:text-base">This book provides a deep understanding of
-                    the fundamentals of data structures and algorithms. Readers will acquire the skills necessary to
-                    develop functional software using data structure design, functionality, and advanced coding
-                    techniques. As the book contains various examples and exercises, students will gain skills in
-                    solving real-life problems.
-                </p>
-                <div class="text-center">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
+            <!-- Modal 1 -->
+            <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+                <div class="modal-box rounded-lg shadow-lg">
+                    <img src="./img/20108-1000x1000.jpg" alt="Book 1" class="w-full h-72 mb-6 object-center rounded-lg">
+                    <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Ronak Ara Chowdhury</h3>
+                    <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $200</p>
+                    <p class="py-4 font-normal text-xs md:text-sm lg:text-base">This book discusses Java Plotting Song
+                        plays
+                        and algorithms. It adapts to new environments and helps improve plating. Reading through real
+                        examples will provide effective learning opportunities.
+                    </p>
+                    <div class="text-center">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </dialog>
+            </dialog>
 
-        <!-- Modal 3 -->
-        <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
-            <div class="modal-box rounded-lg shadow-lg">
-                <img src="./img/python.jpg" alt="Book 3" class="w-full h-72 mb-6 rounded-lg">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Touhid Hossain</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $300</p>
-                <p class="py-4 text-xs md:text-sm lg:text-base">This book provides the fundamentals of Python and the
-                    technical knowledge required for AI. Readers will gain an understanding of modern machine learning
-                    and data analysis. The authors have used tutorial and project-based teaching methods, which will
-                    help the students to develop real-life skills.
-                </p>
-                <div class="text-center">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
+            <!-- Modal 2 -->
+            <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+                <div class="modal-box rounded-lg shadow-lg">
+                    <img src="./img/images (6).jpg" alt="Book 2" class="w-full h-72 mb-6 rounded-lg">
+                    <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Tofail Ahmad Noman</h3>
+                    <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $400</p>
+                    <p class="py-4 text-xs md:text-sm font-normal lg:text-base">This book provides a deep understanding
+                        of
+                        the fundamentals of data structures and algorithms. Readers will acquire the skills necessary to
+                        develop functional software using data structure design, functionality, and advanced coding
+                        techniques. As the book contains various examples and exercises, students will gain skills in
+                        solving real-life problems.
+                    </p>
+                    <div class="text-center">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </dialog>
+            </dialog>
 
-        <!-- Modal 4 -->
-        <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
-            <div class="modal-box rounded-lg shadow-lg">
-                <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg" alt="Book 4"
-                    class="w-full h-72 mb-6 rounded-lg">
-                <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Zahidul Islam</h3>
-                <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $250</p>
-                <p class="py-4 text-xs md:text-sm lg:text-base">This book covers the fundamentals of web design and
-                    development, useful for both new and experienced developers. Readers will be introduced to modern
-                    web technologies and gain applicable skills through this book.
-                </p>
-                <div class="text-center">
-                    <form method="dialog">
-                        <button class="btn bg-cyan-300 border-none w-full rounded-lg">Close</button>
-                    </form>
+            <!-- Modal 3 -->
+            <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+                <div class="modal-box rounded-lg shadow-lg">
+                    <img src="./img/python.jpg" alt="Book 3" class="w-full h-72 mb-6 rounded-lg">
+                    <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Touhid Hossain</h3>
+                    <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $300</p>
+                    <p class="py-4 text-xs md:text-sm lg:text-base">This book provides the fundamentals of Python and
+                        the
+                        technical knowledge required for AI. Readers will gain an understanding of modern machine
+                        learning
+                        and data analysis. The authors have used tutorial and project-based teaching methods, which will
+                        help the students to develop real-life skills.
+                    </p>
+                    <div class="text-center">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </dialog>
+            </dialog>
+
+            <!-- Modal 4 -->
+            <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle p-8 md:p-0 rounded-lg">
+                <div class="modal-box rounded-lg shadow-lg">
+                    <img src="./img/Web_Development_66643_4th_Semester-Technical_Prokasani-9ce89-264175.jpeg"
+                        alt="Book 4" class="w-full h-72 mb-6 rounded-lg">
+                    <h3 class="font-bold text-base md:text-xl lg:text-2xl">Write: Md Zahidul Islam</h3>
+                    <p class="mt-2 font-semibold text-sm md:text-base lg:text-xl">Prize: $250</p>
+                    <p class="py-4 text-xs md:text-sm lg:text-base">This book covers the fundamentals of web design and
+                        development, useful for both new and experienced developers. Readers will be introduced to
+                        modern
+                        web technologies and gain applicable skills through this book.
+                    </p>
+                    <div class="text-center">
+                        <form method="dialog">
+                            <button
+                                class="w-full px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-300 rounded-lg">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
 
     </main>
 
@@ -437,7 +472,6 @@
                 slide.style.display = (i === index) ? 'block' : 'none';
             });
         }
-
         function nextSlide() {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
@@ -445,6 +479,29 @@
 
         showSlide(currentIndex);
         setInterval(nextSlide, 2000);
+
+
+        // Only style desktop nav links
+        const navStyle = "inline-block hover:text-blue-800 font-bold text-sm";
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.className = navStyle;
+        });
+
+        // Responsive mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Hide menu when a mobile link is clicked
+            mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
     </script>
 </body>
 

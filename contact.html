@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/233bd69685.js" crossorigin="anonymous"></script>
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Nunito', sans-serif;">
+    <nav class="navbar sticky top-0 p-4 z-50 shadow-md bg-white">
+        <div class="container mx-auto flex justify-between items-center px-3 xl:px-36">
+            <a href="./home.html" class="flex items-center">
+                <img class="w-8 md:w-10 rounded-full mr-2 border" src="./img/download.png" alt="Logo" />
+                <div class="text-base md:text-xl font-bold text-black">Computer Department</div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="./home.html" class="nav-link">HOME</a>
+                <a href="./teachers.html" class="nav-link">TEACHERS</a>
+                <a href="./club.html" class="nav-link">CLUB</a>
+                <a href="./gallery.html" class="nav-link">GALLERY</a>
+                <a href="./contact.html" class="nav-link">CONTACT</a>
+                <div
+                    class="text-base border h-8 w-8 bg-black text-white text-center rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden relative">
+                <button id="mobile-menu-button" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </button>
+                <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-50">
+                    <a href="./home.html" class="block px-4 py-2 mobile-nav-link">HOME</a>
+                    <a href="./teachers.html" class="block px-4 py-2 mobile-nav-link">TEACHERS</a>
+                    <a href="./club.html" class="block px-4 py-2 mobile-nav-link">CLUB</a>
+                    <a href="./gallery.html" class="block px-4 py-2 mobile-nav-link">GALLERY</a>
+                    <a href="./contact.html" class="block px-4 py-2 mobile-nav-link">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="bg-blue-50/70 text-gray-80 min-h-[calc(100vh-210px)]">
+        <section class="max-w-7xl mx-auto p-6 md:pt-8 lg:pt-20">
+            <h2 class="text-3xl font-bold text-center mb-2">CONTACT ME</h2>
+            <p class="text-center mb-10 text-gray-600">Use the contact form below to send me an email</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Contact Form -->
+                <form class="space-y-6 bg-white p-8 hover:shadow-lg transition duration-500">
+                    <div>
+                        <label class="block font-semibold mb-1">FULL NAME <span class="text-red-500">*</span></label>
+                        <input type="text" placeholder="Enter Your Name" required
+                            class="w-full border border-gray-300 p-3 focus:outline-none focus:ring-0" />
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">EMAIL ADDRESS <span
+                                class="text-red-500">*</span></label>
+                        <input type="email" placeholder="Enter Your Email" required
+                            class="w-full border border-gray-300 p-3 focus:outline-none focus:ring-0" />
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">MESSAGE <span class="text-red-500">*</span></label>
+                        <textarea rows="5" placeholder="Write your message here..." required
+                            class="w-full border border-gray-300 p-3 resize-none focus:outline-none focus:ring-0"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-green-600 text-white px-6 py-3 hover:bg-green-700 transition flex items-center gap-2">
+                        SEND MESSAGE
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="bg-white p-8 hover:shadow-lg transition duration-500">
+                    <h3 class="text-xl font-bold mb-4">GET IN TOUCH</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="text-red-500 text-2xl"><i class="fas fa-envelope"></i></span>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p>masiurislam28@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-green-500 text-2xl"><i class="fas fa-phone-alt"></i></span>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p>+8801327023639<br />+8801615209724</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></span>
+                            <div>
+                                <p class="font-semibold">Whatsapp</p>
+                                <p>+8801327023639</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-yellow-500 text-2xl"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p>Patuakhali, Barisal, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-4 mt-6 text-xl">
+                        <a href="#" class="text-red-500 hover:text-red-600 text-2xl"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-black text-2xl"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Computer Science Department. All rights reserved.</p>
+            <div class="space-x-4 mt-4">
+                <a href="#" class="hover:text-teal-300">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-300">Terms of Service</a>
+            </div>
+            <div class="mt-4">
+                <a target="_blank" href="https://patuakhali.polytech.gov.bd/"
+                    class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white hover:text-teal-300 mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Only style desktop nav links
+        const navStyle = "inline-block hover:text-blue-800 font-bold text-sm";
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.className = navStyle;
+        });
+
+        // Responsive mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Hide menu when a mobile link is clicked
+            mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
